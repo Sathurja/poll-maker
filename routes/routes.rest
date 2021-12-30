@@ -1,0 +1,117 @@
+// 1. Post Poll
+POST http://localhost:3000/polls/
+Content-Type: application/json
+
+{
+    "poll_name": "Faviourite Color",
+    "description": "Choose your faviourite Color",
+    "options": {"Red" : 0,
+                "Green" : 0,
+                "Blue": 0,
+                "Other": 0}
+}
+
+
+###
+// 2. Get Poll Results
+GET http://localhost:8080/polls/61c13d625f659b10d3bc7f7a
+
+
+###
+// 3. Post Responce (aka patch choice array)
+PATCH http://localhost:3000/polls/61c1408fefd5a93c6ce4fbea
+Content-Type: application/json
+
+{
+    "choice": "Red"
+}
+
+
+###
+// 4. Delete Poll
+DELETE http://localhost:3000/polls/61c693ca64c869fa20795f8a
+
+
+###
+// 5. Update Poll
+PATCH http://localhost:3000/polls/61c12872f6d50fa0603212de
+Content-Type: application/json
+
+{
+    "options": ["Purple", "Green", "Blue", "Other"],
+}
+
+###
+// 6. Get Poll Choices (really number 3 order)
+
+
+
+###
+//To get All the Polls
+GET http://localhost:8080/polls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+//To get All the books
+GET http://localhost:3000/polls
+
+###
+//To get ONE book
+GET http://localhost:3000/books/61c00693d18ec8bc9f6c7f70
+
+###
+//To create ONE book
+POST http://localhost:3000/polls/
+Content-Type: application/json
+
+{
+    "poll_name": "Faviourite Color",
+    "description": "Choose your faviourite Color",
+    "options": ["Purple", "Green", "Blue", "Other"],
+    "number_of_participant": 10
+}
+
+###
+//To update ONE book
+PATCH http://localhost:3000/books/61c00693d18ec8bc9f6c7f70
+Content-Type: application/json
+
+{
+    "author": "A Really Cool Author"
+}
+
+
+### 
+//To delete ONE book
+DELETE http://localhost:3000/books/61bffe44ed243fa098186b00
